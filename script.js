@@ -1,92 +1,153 @@
+// Задание 2
+
+// Коллбек (Callback)
+
+// Бир функцияга (экинчи же башка любой фунция)аргумент катары берилип жатса жана ал параметрден алып чакырылып жатса,
+//  ошол коллбек фунция деп айтылат.
+// Аргумент катары берилип жатса ал коллбек.
+
+// Хай ордер (Higher order )
+
+// Озуно коллбек функция алса ал хай ордер функция болот.
+// Аргумент катары алынып жатса ал хай ордер
 
 
-// ! задача - 1
 
-const nambers = [1, 2, 3, 4, 5];
-const nam = (element) => {
-  return element * element;
-};
-const mynam = nambers.map(nam);
-console.log(mynam);
 
-// ! задача - 2
-const userName = [
-  { forstName: "John", lastName: "Obama", age: 34, gender: "male" },
-  { forstName: "Ariana", lastName: "Grande", age: 22, gender: "femali" },
-  { forstName: "Naruto", lastName: "Uzumaki", age: 19, gender: "male" },
-  { forstName: "Cristiano", lastName: "Ronaldo", age: 38, gender: "male" },
-];
-const myName = userName.map((item) => {
-  return {
-    fullName: item.forstName + " " + item.lastName,
-    age:item.age,
-    gender:item.gender,
-  };
-});
-console.log(myName);
+// Задание 3
 
-! задача - 3
+// Фото 1
 
-const words = [1, 2, 3, 4, 5, 4, 8, 34 , 3, 6];
+// const numbers = [1, 2, 3, 4, 5];
 
-const filteredWords = words.filter((Element)=>{
-    if (Element %2===0) {
-        return Element
-    }
-});
-console.log(filteredWords);
+// const resultMap = numbers.map((element)=> element ** 2);
+// console.log(resultMap);
 
-// ! задача - 4
+
+
+
+// Фото 2
+
+// const users = [
+//   { firstName: "Jonh", lastName: "Obama", age: "34", gender: "male" },
+//   { firstName: "Ariana", lastName: "Grande", age: "22", gender: "female" },
+//   { firstName: "Naruto", lastName: "Uzumaki", age: "19", gender: "male" },
+//   { firstName: "Cristiano", lastName: "Ronaldo", age: "38", gender: "male" },
+// ];
+
+// const array = users.map((item) => {
+//   return {
+//     fullName: item.firstName + "" + item.lastName,
+//     age: item.age,
+//     gender: item.gender,
+//   };
+// });
+// console.log(array);
+
+
+// Фото 3
+
+// const numbers = [1, 2, 3, 4, 5, 4, 8, 34, 6];
+
+// const filterNumbers = numbers.filter((item) => {
+//     const items = item % 2;
+//     return items === 0
+// })
+
+// console.log(filterNumbers)
+
+
+
+
+// Фото 4
+
+
+// const users = [
+//     {fisrtName:"Jonh", lastName:"Obama", age: 34, gender:"male"},
+//     {fisrtName:"Ariane", lastName:"Grande", age: 18, gender:"female"},
+//     {fisrtName:"Naruto", lastName:"Uzumaki", age: 19, gender:"male"},
+//     {fisrtName:"Kakashi", lastName:"Hatake", age: 28, gender:"male"},
+//     {fisrtName:"Sakura", lastName:"Chan", age: 18, gender:"female"},
+// ]
+
+// const newUsers = users.filter ((item) => { 
+//     if(item.fisrtName == "Ariane" || item.fisrtName == "Sakura") {
+//         return true;
+//     }  else {
+//         return false;
+//     }
+// })
+// console.log(newUsers)
+
+
+// Фото 7
 
 const users = [
-  { forstName: "John", lastName: "Obama", age: 34, gender: "male" },
-  { forstName: "Ariana", lastName: "Grande", age: 22, gender: "femali" },
-  { forstName: "Naruto", lastName: "Uzumaki", age: 19, gender: "male" },
-  { forstName: "Cristiano", lastName: "Ronaldo", age: 38, gender: "male" },
-  { forstName: "Sakura", lastName: "chan", age: 18, gender: "femali" },
-];
-const ser = users.filter ((element) => {
-    if (element.forstName === "Ariana" || element.forstName === "Sakura") {
-        return true;
-    }
-    return false;
-})
-console.log(ser);
-
-! задача -5
-
-const numbers5 = [1, 2, 3, 4, 5, 4, 8, 34, 3, 6];
-
-const num0 = 0;
-const num5 = numbers5.reduce((element, summa) => element + summa);
-console.log(num5);
-
-! задача - 6
-
-let sum = 0;
-const numbers6 = [1, 2, 3, 4, 5, 4, 8, 34, 3, 6];
-numbers6.forEach((element) => {
-  if (element % 2 === 1) {
-    sum += element;
-  }
-});
-console.log(sum);
-
-! задача - 7
-
-const user7 = [
-  { forstName: "John", lastName: "Obama", age: 34, gender: "male" },
-  { forstName: "Ariana", lastName: "Grande", age: 22, gender: "femali" },
-  { forstName: "Naruto", lastName: "Uzumaki", age: 19, gender: "male" },
-  { forstName: "Kakashi", lastName: "Hatake", age: 38, gender: "male" },
-  { forstName: "Sakura", lastName: "chan", age: 18, gender: "femali" },
+    {fisrtName:"Jonh", lastname:"Obama", age: 34, gender:"male"},
+    {fistName:"Ariane",lastName:"Grande", age: 18, gender:"female"},
+    {firtName:"Naruto", lastName:"Uzumaki", age: 19, gender:"male"},
+    {firstName:"Kakashi", lastName:"Hatake", age: 28, gender:"male"},
+    {ferstName:"Sakura", lastName:"Chan", age: 18, gender:"male"}
 ]
-const res = user7.find((element) => element.forstName === "Naruto")
-console.log(res);
 
-! задача - 8
+const findUsers = users.find((item) => item.age === 19);
 
-const numbers8 = [1, 2, 3, 4, 5, 4, 8, 34, 3, 6];
 
-const num8 = numbers8.findIndex((element) => element === 34)
-console.log(num8);
+console.log(findUsers)
+
+
+// фото 8
+
+// const numbers = [1, 2, 3, 4, 5, 4, 8, 34, 6];
+
+// const resultIndex = numbers.findIndex((element) => element == 34);
+// console.log(resultIndex)
+
+
+// фото 5
+
+// const  numbers = [1, 2, 3, 4, 5, 4, 8, 34, 3, 6];
+
+// const resultreduce = numbers.reduce((acc, item ) =>  {
+//     return acc + item;
+// })
+// console.log(resultreduce)
+
+
+// фото 6
+
+const numbers = [1, 2, 3, 4, 5, 4, 8, 34, 3, 6];
+
+let i = 0;
+
+numbers.forEach((item) => {
+    if (item % 2  == 1) {
+        return i += item;
+    }
+});
+
+console.log(i);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
